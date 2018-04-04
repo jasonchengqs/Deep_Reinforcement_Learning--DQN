@@ -1,2 +1,7 @@
-# Deep_Reinforcement_Learning--DQN_4_human_level_game_playing
-CS7642 (Project 2)
+# CS7642_RL_Prj2
+## Implementation
+In this work, the DQN is implemented in an object-oriented manner. The game setup is abstracted with a Game class, which controls the playing, rewarding, and finishing functions of the game. The playing function is encapsulated by an Agent class, which mainly controls the updating of actions by referring to past experience. The past experience is abstracted by another Experience class, which is initialized in agent class to specify the agent’s past experience. The deep Q network is setup and adjusted in this class. A built-in main class is serving as an individual observer of the training process performed by Game-Agent-Experience trilogy. A separate experiment.py file is used to perform test on the learned model.
+## Running steps
+0. Required packages: python 3.4, gym, random, math, numpy, keras, csv, h5py, tensorflow
+1. run proj2_DQN-FT.py --> Three files will be generated: 1) LunerLander-v2_DQN-FT.h5 (learned Q net work model); 2) LunerLander-v2_DQN-FT_Rewards.csv (reward per episode in training process); 3) LunerLander-v2_DQN-FT_EpiLen.csv (recording of each episode length)
+2. run experiment.py --> This file should be placed in the same directory with LunerLander-v2_DQN-FT.h5; it will detect the learned Q network model and run evaluation of the model with 500 episodes. Two files will be generated: 1) Experiment_DQN-FT_rewards.csv (reward per episode); 2) Experiment_DQN-FT_EpiLen.csv (recording of each episode length)
